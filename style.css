@@ -1,0 +1,372 @@
+:root {
+  --tomato: rgb(255, 98, 87);
+
+  --darkSlateGrey: hsl(234, 29%, 20%);
+  --charcoalGrey: hsl(235, 18%, 26%);
+  --gray: hsl(231, 7%, 60%);
+  --white: hsl(0, 0%, 100%);
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul,
+button,
+input {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 15.8px;
+  font-weight: 500;
+  color: var(--darkSlateGrey);
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.newsletter-sign-up-form {
+  padding: 32px 23px 40px 23px;
+}
+
+h1 {
+  color: var(--darkSlateGrey);
+  font-size: 40.18px;
+  font-weight: 700;
+}
+
+p {
+  line-height: 1.44;
+}
+
+.newsletter-sign-up-form p {
+  margin-top: 22px;
+}
+
+.newsletter-updates-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 28px;
+}
+
+.newsletter-updates-list li {
+  display: flex;
+  gap: 16px;
+  line-height: 1.365;
+}
+
+.newsletter-updates-list li::before {
+  content: "";
+  display: inline-block;
+  width: 22.67px;
+  height: 21px;
+  background-image: url("./assets/images/icon-list.svg");
+  background-repeat: no-repeat;
+}
+
+#newsletter-sign-up-form-email-illustration {
+  width: 100%;
+  max-height: 380px;
+  aspect-ratio: 33 / 25;
+  background-image: url("./assets/images/illustration-sign-up-mobile.svg");
+  background-size: 100%;
+  background-position: 10% 10%;
+  border-bottom-right-radius: 16px;
+  border-bottom-left-radius: 16px;
+}
+
+#newsletter-sign-up-form-email {
+  margin-top: 39px;
+}
+
+#newsletter-sign-up-form-email-input-wrapper {
+  position: relative;
+}
+
+#newsletter-sign-up-form-email-input-label {
+  display: inline-block;
+  font-size: 0.7574rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+#newsletter-sign-up-form-email-input {
+  width: 100%;
+  padding: 24px;
+  padding-top: 17px;
+  padding-bottom: 18px;
+  border: 1px solid #c8c8c8;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  --placeholderColor: #858489;
+}
+
+#newsletter-sign-up-form-email-input:focus-visible {
+  outline: none;
+  border: 1px solid #292734;
+  --placeholderColor: #292734;
+}
+
+#newsletter-sign-up-form-email-input::-webkit-input-placeholder {
+  color: var(--placeholderColor);
+  font-weight: 400;
+}
+/* Firefox 4-18 */
+#newsletter-sign-up-form-email-input:-moz-placeholder {
+  color: var(--placeholderColor);
+  font-weight: 400;
+  opacity: 1;
+}
+/* Firefox 19+ */
+#newsletter-sign-up-form-email-input::-moz-placeholder {
+  color: var(--placeholderColor);
+  font-weight: 400;
+  opacity: 1;
+}
+/* IE 10-11 */
+#newsletter-sign-up-form-email-input:-ms-input-placeholder {
+  color: var(--placeholderColor);
+  font-weight: 400;
+}
+/* Edge */
+#newsletter-sign-up-form-email-input::-ms-input-placeholder {
+  color: var(--placeholderColor);
+  font-weight: 400;
+}
+/* MODERN BROWSER */
+#newsletter-sign-up-form-email-input::placeholder {
+  color: var(--placeholderColor);
+  font-weight: 400;
+}
+
+#newsletter-sign-up-form-email[data-valid="false"]
+  #newsletter-sign-up-form-email-input {
+  background-color: #ffe8e6;
+  border: 1px solid #c67b76;
+  color: #f97078;
+  --placeholderColor: #f97078;
+}
+
+#newsletter-sign-up-form-email[data-valid="false"]
+  .newsletter-sign-up-form-email-input-error-msg {
+  display: block;
+}
+
+.newsletter-sign-up-form-email-input-error-msg {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  display: inline-block;
+  font-size: 0.7574rem;
+  font-weight: 600;
+  color: #f97078;
+  display: none;
+}
+
+.newsletter-sign-up-form-button {
+  position: relative;
+  width: 100%;
+  color: var(--white);
+  font-size: 1.0136rem;
+  font-weight: 700;
+  background-color: var(--darkSlateGrey);
+  border: none;
+  border-radius: 8px;
+  padding: 20px 0px 17px 0px;
+  cursor: pointer;
+  transition: background-color 200ms ease-in-out;
+}
+
+.newsletter-sign-up-form-button-hover {
+  position: absolute;
+  z-index: 2;
+  inset: 0px 0px 0px 0px;
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 0.1875rem;
+  background: linear-gradient(to right, #ff537b, #ff693e);
+  border-radius: 8px;
+  opacity: 0;
+  transition: opacity 200ms ease-in-out;
+}
+
+.newsletter-sign-up-form-button-box-shadow {
+  position: absolute;
+  z-index: 1;
+  inset: 6px 0px 0px 0%;
+  width: 101%;
+  height: 110%;
+  pointer-events: none;
+  background: #ff4043;
+  border-radius: 8px;
+  opacity: 0;
+  transform: scale(0.5);
+  transform-origin: bottom;
+  transition: opacity 200ms ease-in-out, transform 200ms ease-in-out;
+  filter: blur(13px);
+}
+
+.success-component {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  padding: 18.349vh 24px 40px 24px;
+}
+
+.success-checkmark {
+  width: 64px;
+  margin-bottom: 36px;
+}
+
+.success-component h1 {
+  line-height: 1;
+  margin-bottom: 23px;
+}
+
+.success-component p {
+  color: #2e3252;
+  line-height: 1.51;
+}
+
+.success-component p .email {
+  font-weight: 700;
+  color: var(--darkSlateGrey);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .newsletter-sign-up-form-button:hover
+    > .newsletter-sign-up-form-button-hover {
+    opacity: 1;
+  }
+
+  .newsletter-sign-up-form-button:hover
+    > .newsletter-sign-up-form-button-box-shadow {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+}
+
+@media screen and (min-width: 582px) {
+  .success-component-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--charcoalGrey);
+  }
+
+  .success-component {
+    width: 54ch;
+    height: unset;
+    background-color: white;
+    padding: 48px 64px 64px 64px;
+    border-radius: 36px;
+  }
+
+  .success-component h1 {
+    font-size: 55.383px;
+  }
+
+  .success-component p {
+    margin-bottom: 40px;
+  }
+
+  #newsletter-sign-up-form-email-illustration {
+    width: 100%;
+    max-height: clamp(0px, 64vw, 491px);
+    aspect-ratio: 33 / 25;
+    background-image: url("./assets/images/illustration-sign-up-mobile.svg");
+    background-size: 100%;
+    background-position: 10% 34%;
+  }
+}
+
+@media screen and (min-width: 965px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: clamp(600px, 100vh, 100vh);
+    background-color: var(--charcoalGrey);
+  }
+
+  p {
+    line-height: 136%;
+  }
+
+  .newsletter-sign-up-form-container {
+    width: 928px;
+    padding: 24px 24px 21px 21px;
+    gap: 8px;
+  }
+
+  .newsletter-sign-up-form-container {
+    display: flex;
+    background-color: var(--white);
+    border-radius: 36px;
+  }
+
+  #newsletter-sign-up-form-email-illustration {
+    order: 2;
+    width: 431px;
+    max-height: 532px;
+    aspect-ratio: 33 / 25;
+    background-image: url("./assets/images/illustration-sign-up-desktop.svg");
+    background-size: 100%;
+    background-position: 10% 10%;
+    border-radius: 16px;
+  }
+
+  .newsletter-updates-list {
+    gap: 12.5px;
+  }
+
+  .newsletter-sign-up-form {
+    margin-top: 31px;
+  }
+
+  h1 {
+    font-size: 55.76px;
+  }
+}
+
+@media screen and (min-width: 965px) and (min-height: 680px) {
+  .newsletter-sign-up-form-container {
+    padding: 24px 24px 21px 41px;
+    gap: 37px;
+  }
+
+  #newsletter-sign-up-form-email-illustration {
+    width: 400px;
+    height: 593px;
+    max-height: unset;
+  }
+}
